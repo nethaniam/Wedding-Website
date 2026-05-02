@@ -799,7 +799,7 @@ details[open] summary:after {
     }
 
 /* Laptop/Desktop Styles */
-    @media (min-width: 1000px) {
+    @media (min-width: 980px) {
         .grid-container {
             flex-direction: row; /* Side-by-side cards on laptop */
             justify-content: center;
