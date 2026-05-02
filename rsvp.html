@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP | The Ayalas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="rsvp-page-body">
+    <div class="form-container">
+        <div id="back-container" style="display: none; text-align: left; margin-bottom: 20px;">
+            <a href="javascript:void(0)" onclick="resetSearch()" class="back-link" data-en="← Back to Search" data-es="← Volver a Buscar">← Back to Search</a>
+        </div>
+        <p class="rsvp-title" id="main-title" data-en="Kindly Rsvp," data-es="Rsvp,">Kindly Rsvp,</p>
+        <p class="rsvp-title" id="rsvp-deadline" style="font-family: 'alice'; font-size: 1.2rem; margin-top: -20px; margin-bottom: 35px;"
+        data-en="before July 12th" data-es="antes del 12 de Julio">before July 12th</p>
+        <div id="search-section">
+            <div class="input-group">
+                <label for="family-search" data-en="ENTER FAMILY LAST NAME" data-es="INGRESA TU APELLIDO AQUI"> ENTER FAMILY LAST NAME HERE</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="text" id="family-search" placeholder="e.g. Ayala">
+                    <button type="button" onclick="findFamily()" class="small-btn" data-en="SEARCH" data-es="BUSCAR">SEARCH</button>
+                </div>
+            </div>
+            <div style="-webkit-tap-highlight-color: transparent; font-size: 0.85rem; text-decoration: none;  text-align: left; margin-top: 20px;">
+                <a href="index.html" class="return-link" data-en="← Return to Wedding Website" data-es="← Volver a la pagina principal">← Return to Wedding Website</a>
+            </div>
+        </div>
+        <div id="selection-section" style="display: none;">
+            <p class="alice" data-en="Multiple parties found. Please select yours:" data-es="Se encontraron varias familias. Por favor selecciona la tuya:">Multiple parties found. Please select yours:</p>
+            <div id="party-options-container">
+            </div>
+        </div>
+        <form name="wedding-rsvp" method="POST" data-netlify="true" id="rsvp-form" onsubmit="event.preventDefault(); alert('Success! (This will go to Netlify later)')"; style="display: none; margin-top: 30px;">
+            <input type="hidden" name="form-name" value="wedding-rsvp" />
+            <p id="family-welcome" style="font-family: 'anastasia'; color: #c7d188; font-size: 3.5rem; padding: 5px; margin-bottom: 20px;"></p>
+            <p id="limit-note" style="font-family: 'alice'; font-size: 1rem; margin-bottom: 40px;"></p>
+            
+            <div class="decision-container" style="display: flex; justify-content: center; gap: 40px; margin-bottom: 40px;">
+                <div id="decision-card" onclick="selectAttendance(true)" style="cursor: pointer; text-align: center;">
+                    <div id="circle-accept" class="attendance-circle"></div>
+                    <p style="font-family: 'alice'; font-size: 0.9rem; margin-top: 10px;" data-en="JOYFULLY ACCEPTS" data-es="ACEPTO CON GUSTO">JOYFULLY ACCEPTS</p>
+                </div>
+
+                <div id="decision-card" onclick="selectAttendance(false)" style="cursor: pointer; text-align: center;">
+                    <div id="circle-decline" class="attendance-circle"></div>
+                    <p style="font-family: 'alice'; font-size: 0.9rem; margin-top: 10px;" data-en="REGRETFULLY DECLINES" data-es="LAMENTABLEMENTE NO ASISTIRE">REGRETFULLY DECLINES</p>
+                </div>
+            </div>
+
+            <div id="attendance-details" style="display: none;">
+                <div class="input-group">
+                    <label for="guest-count-select" data-en="NUMBER OF GUESTS ATTENDING" data-es="NUMERO DE INVITADOS">NUMBER OF GUESTS ATTENDING</label>
+                    <select name="guest-count" id="guest-count-select" onchange="toggleNameField()" required></select>
+                </div>
+                <div class="input-group" style="margin-top: 20px;">
+                    <label for="guest-email" data-en="EMAIL ADDRESS" data-es="CORREO ELECTRONICO">EMAIL ADDRESS</label>
+                    <input type="email" name="email" id="guest-email" autocomplete="email" 
+                    placeholder="email@example.com"
+                    data-placeholder-en="email@example.com" 
+                    data-placeholder-es="correo@ejemplo.com">
+                </div>
+                <div class="input-group" style="margin-top: 20px;">
+                    <label for="guest-address" data-en="MAILING ADDRESS" data-es="DIRECCION POSTAL">MAILING ADDRESS</label>
+                    <textarea name="address" id="guest-address" autocomplete="street-address" rows="2" 
+                    placeholder="Street, City, State, Zip"
+                    data-placeholder-en="Street, City, State, Zip"
+                    data-placeholder-es="Calle, Ciudad, Estado, Código Postal"></textarea>
+                </div>
+                <div id="names-section" style="display: none;">
+                    <div class="input-group">
+                        <label for="guest-names" data-en="GUEST NAMES" data-es="NOMBRES DE LOS INVITADOS">GUEST NAMES</label>
+                        <textarea name="guest-names" id="guest-names" rows="3"
+                        placeholder="First and Last Names"
+                        data-placeholder-en="First and Last Names"
+                        data-placeholder-es="Nombres y Apellidos"></textarea>
+                    </div>
+                </div>
+                <div id="message-section" style="display: none;">
+                    <div class="input-group">
+                        <label for="guest-message" data-en="COMMENTS" data-es="COMENTARIOS">COMMENTS</label>
+                        <textarea name="guest-message" id="guest-message" rows="2"
+                        placeholder="Leave a sweet message for the future Ayalas."
+                        data-placeholder-en="Leave a sweet message for the future Ayalas."
+                        data-placeholder-es="Deja un mensaje para los futuros Ayalas."></textarea>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="family-id" id="family-id" value="">
+            <input type="hidden" name="form-name" value="wedding-rsvp" />
+            <input type="hidden" name="attendance-status" id="attendance-status" value="">
+            <button type="submit" class="rsvp-button" data-en="SUBMIT RSVP" data-es="ENVIAR CONFIRMACION">SUBMIT RSVP</button>
+        </form>
+
+        <div id="thank-you-msg" style="display: none; padding: 40px 0; margin-top: -15px;">
+            <p style="font-family: 'anastasia'; font-size: 3.5rem; color: #c7d188; margin-bottom: 20px;"
+               data-en="Thank You!" 
+               data-es="Gracias!">
+                Thank You!
+            </p>
+            <p style="font-family: 'alice'; font-size: 1.2rem; line-height: 1.5;">
+                <span style="font-family: 'alice';" data-en="We have received your RSVP." data-es="Hemos recibido tu confirmación.">We have received your RSVP.</span><br>
+                <span style="font-family: 'alice';" data-en="We can't wait to see you at our wedding!" data-es="¡Estamos ansiosos por verte en nuestra boda!">We can't wait to see you at our wedding!</span>
+            </p>
+        
+            <a href="index.html" class="return-link" data-en="Return to Wedding Website" data-es="Volver a la página principal">Return to Wedding Website</a>
+        </div>
+
+        <p id="error-msg" style="display: none; margin-top: 20px;" 
+       data-en="Name not found. Please try another last name or contact us @ (626) 469 - 9007." 
+       data-es="Nombre no encontrado. Por favor intenta con otro apellido o contáctanos al (626) 469 - 9007.">
+        Name not found. Please try another last name or contact us @ (626) 469 - 9007.
+    </p>
+    </div>
+
+    <script>
+        let guestList = {};
+        window.onload = async () => {
+            try {
+                const response = await fetch('guest-list.json');
+                guestList = await response.json();
+            } catch (e) {
+                console.error("Could not load guest list", e);
+            }
+        };
+
+        function findFamily() {
+            const lang = localStorage.getItem('preferred_lang') || 'en';
+
+            const input = document.getElementById("family-search").value.toLowerCase().trim();
+            const selectionSection = document.getElementById("selection-section");
+            const optionsContainer = document.getElementById("party-options-container");
+            const form = document.getElementById("rsvp-form");
+            const error = document.getElementById("error-msg");
+            const countSelect = document.getElementById("guest-count-select");
+            const searchSection = document.getElementById("search-section");
+            const backContainer = document.getElementById("back-container");
+            const mainTitle = document.getElementById("main-title");
+            const deadline = document.getElementById("rsvp-deadline");
+
+            const familyKey = Object.keys(guestList).find(key => key.toLowerCase() === input);
+
+            if (familyKey) {
+                const result = guestList[familyKey];
+                error.style.display = "none";
+                searchSection.style.display = "none";
+                mainTitle.style.display = "none";
+                deadline.style.display = "none";
+                backContainer.style.display = "block";
+
+                if (result.length === 1) {
+                    selectionSection.style.display = "none";
+                    selectSpecificParty(result[0]); 
+                } else {
+                    selectionSection.style.display = "block";
+                    optionsContainer.style.textAlign = "left";
+                    optionsContainer.innerHTML = "";
+                    optionsContainer.style.display = "flex";
+                    optionsContainer.style.flexDirection = "column";
+                    optionsContainer.style.alignItems = "center";
+                    
+                    result.forEach(party => {
+                        const btn = document.createElement("button");
+                        btn.type = "button";
+                        btn.className = "rsvp-button";
+                        btn.style.marginBottom = "10px";
+                        btn.style.display = "block";
+                        
+                        const fallbackText = (lang === 'es') ? "Seleccionar familia" : "Select Party";
+                        btn.innerText = party.guest || party.display || fallbackText;
+                        
+                        btn.onclick = () => selectSpecificParty(party);
+                        optionsContainer.appendChild(btn);
+                    });
+                }
+            } else {
+                error.style.display = "block";
+                document.getElementById("rsvp-form").style.display = "none";
+                selectionSection.style.display = "none";
+            }
+        }
+
+        function selectSpecificParty(party) {
+            const lang = localStorage.getItem('preferred_lang') || 'en';
+
+            if (localStorage.getItem("rsvp_submitted_" + party.id)) {
+                document.getElementById("search-section").style.display = "none";
+                document.getElementById("selection-section").style.display = "none";
+                document.getElementById("main-title").style.display = "none";
+                document.getElementById("rsvp-deadline").style.display = "none";
+                document.getElementById("back-container").style.display = "block";
+                document.getElementById("thank-you-msg").style.display = "block";
+                return;
+            }
+
+            const form = document.getElementById("rsvp-form");
+            const countSelect = document.getElementById("guest-count-select");
+            const welcomeText = document.getElementById("family-welcome");
+            const limitNote = document.getElementById("limit-note");
+
+            document.getElementById("family-id").value = party.id;
+            document.getElementById("search-section").style.display = "none";
+            document.getElementById("main-title").style.display = "none";
+            document.getElementById("rsvp-deadline").style.display = "none";
+            document.getElementById("selection-section").style.display = "none";
+
+            form.style.display = "block";
+
+            if (lang === 'es') {
+                const nameES = party.display_es || party.display;
+                const saludo = (party.allowed === 1) ? "Bienvenido(a), " : "Bienvenidos, ";
+                
+                welcomeText.innerText = saludo + nameES;
+                limitNote.innerText = (party.allowed === 1) 
+                    ? `Hemos reservado 1 asiento para ti.` 
+                    : `Hemos reservado ${party.allowed} asientos para tu familia.`;
+            } else {
+                welcomeText.innerText = "Welcome, " + party.display;
+                limitNote.innerText = (party.allowed === 1)
+                    ? "We have reserved 1 seat for you."
+                    : `We have reserved ${party.allowed} seats for your party.`;
+            }
+
+            countSelect.innerHTML = "";
+            for (let i = 0; i <= party.allowed; i++) {
+                let opt = document.createElement("option");
+                opt.value = i;
+                opt.innerHTML = i;
+                countSelect.appendChild(opt);
+            }
+        }
+
+        function resetSearch() {
+            document.getElementById("search-section").style.display = "block";
+            document.getElementById("rsvp-deadline").style.display = "block";
+            document.getElementById("main-title").style.display = "block";
+            document.getElementById("rsvp-form").style.display = "none";
+            document.getElementById("back-container").style.display = "none";
+            document.getElementById("selection-section").style.display = "none";
+            document.getElementById("error-msg").style.display = "none";
+            document.getElementById("thank-you-msg").style.display = "none";
+            document.getElementById("circle-accept").classList.remove("selected");
+            document.getElementById("circle-decline").classList.remove("selected");
+            document.getElementById("attendance-details").style.display = "none";
+            document.getElementById("message-section").style.display = "none";
+            document.getElementById("guest-message").value = "";
+            document.getElementById("guest-email").value = "";
+            document.getElementById("guest-address").value = "";
+            document.getElementById("guest-names").value = "";
+            document.getElementById("family-search").value = "";
+        }
+
+        function selectAttendance(isAttending) {
+            const acceptCircle = document.getElementById("circle-accept");
+            const declineCircle = document.getElementById("circle-decline");
+            const details = document.getElementById("attendance-details");
+            const countSelect = document.getElementById("guest-count-select");
+            const statusInput = document.getElementById("attendance-status");
+            const messageSection = document.getElementById("message-section");
+
+            if(isAttending) {
+                acceptCircle.classList.add("selected");
+                declineCircle.classList.remove("selected");
+                messageSection.style.display = "block";
+                details.style.display = "block";
+                countSelect.required = true;
+                statusInput.value = "Attending";
+
+                if(countSelect.value === "0") {
+                    countSelect.value = "1";
+                    toggleNameField();
+                }
+            } else {
+                acceptCircle.classList.remove("selected");
+                declineCircle.classList.add("selected");
+                messageSection.style.display = "none";
+                details.style.display = "none";
+                statusInput.value = "Declining";
+            }
+            toggleNameField();
+        }
+
+        function toggleNameField() {
+            const countSelect = document.getElementById("guest-count-select");
+            const guestCount = parseInt(countSelect.value); // Convert to number immediately
+            const namesSection = document.getElementById("names-section");
+            const namesInput = document.getElementById("guest-names"); // Ensure this matches your ID
+            
+            const acceptCircle = document.getElementById("circle-accept");
+            const declineCircle = document.getElementById("circle-decline");
+            const statusInput = document.getElementById("attendance-status");
+            const details = document.getElementById("attendance-details");
+            const messageSection = document.getElementById("message-section");
+
+            if (guestCount > 0) {
+                namesSection.style.display = "block";
+                namesInput.setAttribute("required", ""); 
+            } else {
+                namesSection.style.display = "none";
+                namesInput.removeAttribute("required"); 
+                namesInput.value = ""; 
+            }
+
+            if (guestCount === 0) {
+                acceptCircle.classList.remove("selected");
+                declineCircle.classList.add("selected");
+                statusInput.value = "Declining";
+                details.style.display = "none";
+                messageSection.style.display = "none";
+            } else {
+                acceptCircle.classList.add("selected");
+                declineCircle.classList.remove("selected");
+                statusInput.value = "Attending";
+                details.style.display = "block";
+                messageSection.style.display = "block";
+            }
+        }
+
+        document.getElementById("rsvp-form").addEventListener("submit", function(e){
+            e.preventDefault();
+
+            const myForm = e.target;
+            const formData = new FormData(myForm);
+
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded"},
+                body: new URLSearchParams(formData).toString(),
+            })
+            .then (() => {
+                const partyId = document.getElementById("family-id").value;
+                localStorage.setItem("rsvp_submitted_" + partyId, "true");
+                document.getElementById("rsvp-form").style.display = "none";
+                document.getElementById("back-container").style.display = "none";
+                document.getElementById("family-welcome").style.display = "none";
+                document.getElementById("limit-note").style.display = "none";
+                document.getElementById("thank-you-msg").style.display = "block";
+            })
+            .catch((error) => alert("Submission error:" + error));
+        });
+        function translatePage(lang) {
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(el => {
+                el.innerHTML = el.getAttribute(`data-${lang}`);
+            });
+
+            const inputs = document.querySelectorAll('[data-placeholder-en]');
+            inputs.forEach(input => {
+                const ph = input.getAttribute(`data-placeholder-${lang}`);
+                if (ph) input.placeholder = ph;
+            });
+
+            localStorage.setItem('preferred_lang', lang);
+        }
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_lang') || 'en';
+            
+            translatePage(savedLang);
+        });
+    </script>
+</body>
+</html>
