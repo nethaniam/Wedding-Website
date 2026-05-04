@@ -11,15 +11,18 @@
         <div id="back-container" style="display: none; text-align: left; margin-bottom: 20px;">
             <a href="javascript:void(0)" onclick="resetSearch()" class="back-link" data-en="← Back to Search" data-es="← Volver a Buscar">← Back to Search</a>
         </div>
-        <p class="rsvp-title" id="main-title" data-en="Kindly Rsvp," data-es="Rsvp,">Kindly Rsvp,</p>
-        <p class="rsvp-title" id="rsvp-deadline" style="font-family: 'alice'; font-size: 1.2rem; margin-top: -20px; margin-bottom: 35px;"
-        data-en="before July 12th" data-es="antes del 12 de Julio">before July 12th</p>
+        <div class="rsvp-title" id="main-title">
+            <p data-en="kindly" data-es="" style="font-family: 'alice'; font-size: 1.5rem;">kindly</p>
+            <p data-en="Rsvp" data-es="Rsvp" style="font-family: 'anastasia'; font-size: 5rem; display: inline-block; transform: rotate(-15deg); margin-top: -20px; margin-left: -40px; padding: 5px;">Rsvp</p>
+            <p class="rsvp-title" id="rsvp-deadline" style="font-family: 'alice'; font-size: 1rem; margin-top: -20px;"
+            data-en="before July 12th" data-es="antes del 12 de Julio">before July 12th</p>
+        </div>
         <div id="search-section">
-            <div class="input-group">
+            <div class="input-group" style="display: flex; flex-direction: column; justify-content: center; min-height: 15vh;">
                 <label for="family-search" data-en="ENTER FAMILY LAST NAME" data-es="INGRESA TU APELLIDO AQUI"> ENTER FAMILY LAST NAME HERE</label>
-                <div style="display: flex; gap: 10px;">
-                    <input type="text" id="family-search" placeholder="e.g. Ayala">
-                    <button type="button" onclick="findFamily()" class="small-btn" data-en="SEARCH" data-es="BUSCAR">SEARCH</button>
+                <div style="display: flex; justify-content: space-between; gap: 20px; height: 5.3vh; margin-top: 0;">
+                    <input type="text" id="family-search" placeholder="e.g. Ayala" style="min-height: 100%; margin: 0; ">
+                    <button type="button" onclick="findFamily()" class="small-btn" style="font-family: 'alice'; font-size: 0.9rem;" data-en="SEARCH" data-es="BUSCAR">SEARCH</button>
                 </div>
             </div>
             <div style="-webkit-tap-highlight-color: transparent; font-size: 0.85rem; text-decoration: none;  text-align: left; margin-top: 20px;">
@@ -33,7 +36,7 @@
         </div>
         <form name="wedding-rsvp" method="POST" data-netlify="true" id="rsvp-form" style="display: none; margin-top: 30px;">
             <input type="hidden" name="form-name" value="wedding-rsvp" />
-            <p id="family-welcome" style="font-family: 'anastasia'; color: #c7d188; font-size: 3.5rem; padding: 5px; margin-bottom: 20px;"></p>
+            <p id="family-welcome" style="font-family: 'anastasia'; color: black; font-size: 3.5rem; padding: 5px; margin-bottom: 20px;"></p>
             <p id="limit-note" style="font-family: 'alice'; font-size: 1rem; margin-bottom: 40px;"></p>
             
             <div class="decision-container" style="display: flex; justify-content: center; gap: 40px; margin-bottom: 40px;">
@@ -51,7 +54,7 @@
             <div id="attendance-details" style="display: none;">
                 <div class="input-group">
                     <label for="guest-count-select" data-en="NUMBER OF GUESTS ATTENDING" data-es="NUMERO DE INVITADOS">NUMBER OF GUESTS ATTENDING</label>
-                    <select name="guest-count" id="guest-count-select" onchange="toggleNameField()" required></select>
+                    <select name="guest-count" id="guest-count-select" onchange="toggleNameField()" style="appearance: none;"></select>
                 </div>
                 <div class="input-group" style="margin-top: 20px;">
                     <label for="guest-email" data-en="EMAIL ADDRESS" data-es="CORREO ELECTRONICO">EMAIL ADDRESS</label>
@@ -89,11 +92,11 @@
             <input type="hidden" name="family-id" id="family-id" value="">
             <input type="hidden" name="form-name" value="wedding-rsvp" />
             <input type="hidden" name="attendance-status" id="attendance-status" value="">
-            <button type="submit" class="rsvp-button" data-en="SUBMIT RSVP" data-es="ENVIAR CONFIRMACION">SUBMIT RSVP</button>
+            <button type="submit" class="rsvp-button" style="font-family: 'alice'; font-size: 0.9rem; margin-top: 10px;" data-en="SUBMIT RSVP" data-es="ENVIAR CONFIRMACION">SUBMIT RSVP</button>
         </form>
 
         <div id="thank-you-msg" style="display: none; padding: 40px 0; margin-top: -15px;">
-            <p style="font-family: 'anastasia'; font-size: 3.5rem; color: #c7d188; margin-bottom: 20px;"
+            <p style="font-family: 'anastasia'; font-size: 3.5rem; color: black; margin-bottom: 20px;"
                data-en="Thank You!" 
                data-es="Gracias!">
                 Thank You!
@@ -210,12 +213,12 @@
                 const nameES = party.display_es || party.display;
                 const saludo = (party.allowed === 1) ? "Bienvenido(a), " : "Bienvenidos, ";
                 
-                welcomeText.innerText = saludo + nameES;
+                welcomeText.innerHTML = `<span style="font-size: 2.5rem; font-family: 'anastasia'; margin-right: -25px;">${saludo}</span><br>${nameES}`;
                 limitNote.innerText = (party.allowed === 1) 
                     ? `Hemos reservado 1 asiento para ti.` 
                     : `Hemos reservado ${party.allowed} asientos para tu familia.`;
             } else {
-                welcomeText.innerText = "Welcome, " + party.display;
+                welcomeText.innerHTML = `<span style="font-size: 2.5rem; font-family: 'anastasia'; margin-right: -25px;">Welcome,</span><br>${party.display}`;
                 limitNote.innerText = (party.allowed === 1)
                     ? "We have reserved 1 seat for you."
                     : `We have reserved ${party.allowed} seats for your party.`;
@@ -270,10 +273,13 @@
                     countSelect.value = "1";
                     toggleNameField();
                 }
+                details.style.display = "block";
+                messageSection.style.display = "block";
             } else {
                 acceptCircle.classList.remove("selected");
                 declineCircle.classList.add("selected");
                 messageSection.style.display = "none";
+                countSelect.value = "0";
                 details.style.display = "none";
                 statusInput.value = "Declining";
             }
@@ -339,6 +345,7 @@
             .catch((error) => alert("Submission error:" + error));
         });
         function translatePage(lang) {
+            document.body.setAttribute('lang', lang);
             const elements = document.querySelectorAll('[data-en]');
             elements.forEach(el => {
                 el.innerHTML = el.getAttribute(`data-${lang}`);

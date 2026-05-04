@@ -12,12 +12,15 @@ function toggleMenu() {
     }
 }
 
-const video = document.querySelector('.hero-video');
+const heroVideo = document.querySelector('.hero-video');
 
-// This fires as soon as the video actually starts playing
-video.onplaying = () => {
-    video.classList.add('is-playing');
-};
+heroVideo.addEventListener('playing', () => {
+    heroVideo.classList.add('is-playing');
+});
+
+heroVideo.play().catch(error => {
+    console.log("Autoplay prevented. This usually happens if 'muted' is missing.");
+});
 
 const countDownDate = new Date("Aug 29,2026 18:00:00").getTime();
 
@@ -55,15 +58,16 @@ const coundownFunction = setInterval(function() {
 }, 1000)
 
 function setLanguage(lang) {
+    document.body.classList.toggle('spanish-active', lang === 'es');
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     document.getElementById('btn-es').classList.toggle('active', lang === 'es');
 
-    const video = document.getElementById('welcome-video');
+    const videos = document.querySelectorAll('.welcome-video');
     
-    if (video) {
+    videos.forEach(video => {
         const newVideoPath = video.getAttribute(`data-video-${lang}`);
         
-        if (!video.src.includes(newVideoPath)) {
+        if (newVideoPath && !video.src.includes(newVideoPath)) {
             video.src = newVideoPath;
             video.load();
             
@@ -71,8 +75,9 @@ function setLanguage(lang) {
                 console.log("Video play interrupted or prevented:", error);
             });
         }
-    }
+    });
 
+    // Handle all other text elements
     const elements = document.querySelectorAll('[data-en]');
     elements.forEach(el => {
         el.innerHTML = el.getAttribute(`data-${lang}`);
@@ -81,7 +86,22 @@ function setLanguage(lang) {
     localStorage.setItem('preferred_lang', lang);
 }
 
+
 window.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferred_lang') || 'en';
     setLanguage(savedLang);
+    const heroVideo = document.querySelector('.hero-video');
+    
+    if (heroVideo) {
+        heroVideo.play().then(() => {
+            heroVideo.classList.add('is-playing');
+        }).catch(error => {
+            console.log("Autoplay blocked or link broken:", error);
+            heroVideo.classList.add('is-playing'); 
+        });
+
+        heroVideo.addEventListener('playing', () => {
+            heroVideo.classList.add('is-playing');
+        });
+    }
 });

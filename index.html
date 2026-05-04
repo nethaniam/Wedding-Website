@@ -21,6 +21,7 @@
             <a href="#dress-code" onclick="toggleMenu()" data-en="Dress Code" data-es="Código de Vestimenta">Dress Code</a>
             <a href="#faq" onclick="toggleMenu()" data-en="FAQ" data-es="Preguntas">FAQ</a>
             <a href="#rsvp" onclick="toggleMenu()" data-en="RSVP" data-es="RSVP">RSVP</a>
+            <a href="#registry" onclick="toggleMenu()" data-en="Our Registry" data-es="Nuestro Registro">Our Registry</a>
             <a href="#contact" onclick="toggleMenu()" data-en="Contact Us" data-es="Ponte en contacto">Contact Us</a>
 
             <div class="lang-section">
@@ -36,8 +37,7 @@
 
     <header id="home" class="hero">
         <video autoplay muted loop playsinline poster="backup photo.png" class="hero-video">
-            <source src="wedding-intro-1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            <source src="https://res.cloudinary.com/dvohm5wk5/video/upload/f_auto,q_auto/v1/wedding-intro-1_rhifyh.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
             <h1 data-en="The Ayalas" data-es="Los Ayalas">The Ayalas</h1>
@@ -45,20 +45,21 @@
         </div>
     </header>
 
-    <section id="welcome" class="intro-section">
-        <video id="welcome-video" 
-        autoplay muted loop playsinline 
-        class="intro-video"
-        src="we-are-getting-married.mp4"
-        data-video-en="we-are-getting-married.mp4" 
-        data-video-es="nos-vamos-a-casar.mp4">
-            Your browser does not support the video tag.
+    <div class="intro-video">
+        <video class="welcome-video" 
+            autoplay muted loop playsinline 
+            src="we-are-getting-married.mp4"
+            data-video-en="we-are-getting-married.mp4" 
+            data-video-es="nos-vamos-a-casar.mp4">
+                Your browser does not support the video tag.
         </video>
+    </div>
+
+    <section id="welcome" class="intro-section">
         <div class="welcome-column">
             <img src="intro-photo-1.PNG" class="intro-photo-1">
             <div class="welcome-section">
                 <p>
-
                 <span style="font-family: 'alice';" data-en="If you’re reading this, we love you! Welcome to our wedding website. We are so excited to share such a special day with all of our favorite people."
                       data-es="Si estás leyendo esto, ¡ya te queremos un montón! Bienvenido a nuestra página web de boda. Estamos muy emocionados de poder compartir un día tan especial con toda nuestra gente querida.">
                     If you’re reading this, we love you! Welcome to our wedding website. We are so excited to share such a special day with all of our favorite people.
@@ -88,6 +89,16 @@
         </div>
     </section>
 
+    <div class="intro-video">
+        <video class="welcome-video" 
+        autoplay muted loop playsinline 
+        src="we-are-getting-married.mp4"
+        data-video-en="we-are-getting-married.mp4" 
+        data-video-es="nos-vamos-a-casar.mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
     <section id="location" class="location-section">
         <div class="image-container">
             <img src="Tezza-1408.JPG">
@@ -115,107 +126,180 @@
         </div>
     </div>
 
-    <section id="love-story" class="love-story-section"></section>
+    <section id="love-story" class="love-story-section">
+        <p class="love-header"> 
+            <span style="font-family: 'alice'; font-size: 1.5rem;" data-en="OUR" data-es="NUESTRA">OUR</span>
+            <span class="love-span"
+            data-en="love"
+            data-es="HISTORIA DE">love </span>
+            <span class="story-span" data-en="STORY" data-es="amor">STORY</span>
+        </p>
+        <div class="love-container">
+            <div class="love-img">
+                <img src="polaroid-1.png">
+                <img src="polaroid-2.png">
+            </div>
+            <div class="story-content">
+                <p data-en="Our story begins in the city of Indianapolis. We both answered the call to attend Indiana Bible (Bridal) College, not knowing what awaited us. God has a beautiful way of bringing people together—sometimes all it takes is one person moving across the country and another choosing to pursue his calling."
+                data-es="Nuestra historia comienza en la ciudad de Indianápolis. Ambos respondimos al llamado de asistir al Indiana Bible (Bridal) College, sin saber lo que nos esperaba. Dios tiene una manera hermosa de unir a las personas; a veces, lo único que se necesita es que una persona cruce el país y que otra elija seguir su llamado.">
+                Our story begins in the city of Indianapolis. We both answered the call to attend Indiana Bible (Bridal) College, not knowing what awaited us. God has a beautiful way of bringing people together—sometimes all it takes is one person moving across the country and another choosing to pursue his calling.</p>
+                <br>
+                <p data-en="It wasn’t love at first sight, we stumbled into each other’s lives not knowing it would be forever. We first met at breakfast in the school cafeteria. Later, that same cafeteria became the place where we worked side by side, sharing laughs and sneaking leftover frosting from the lids of the pies we prepared for Sunday lunches."
+                data-es="No fue amor a primera vista; tropezamos el uno con la vida del otro sin saber que sería para siempre. Nos conocimos desayunando en la cafetería de la escuela. Tiempo después, esa misma cafetería se convirtió en el lugar donde trabajamos codo a codo, compartiendo risas y robando restos de glaseado de las tapas de los pays que preparábamos para los almuerzos de los domingos.">
+                    It wasn’t love at first sight, we stumbled into each other’s lives not knowing it would be forever. We first met at breakfast in the school cafeteria. Later, that same cafeteria became the place where we worked side by side, sharing laughs and sneaking leftover frosting from the lids of the pies we prepared for Sunday lunches.
+                </p> <br>
+                <p data-en="When we both returned for a second year in the fall of 2024, we were voted in as officers for the Urban Missions Club. That role brought us together almost daily, and through planning events, ministry opportunities, and countless meetings, our friendship began to grow into something deeper."
+                data-es="Cuando ambos regresamos para nuestro segundo año en el otoño de 2024, fuimos elegidos como oficiales del Club de Misiones Urbanas. Ese papel nos unió casi a diario y, a través de la planificación de eventos, oportunidades de ministerio e innumerables reuniones, nuestra amistad comenzó a transformarse en algo más profundo.">
+                    When we both returned for a second year in the fall of 2024, we were voted in as officers for the Urban Missions Club. That role brought us together almost daily, and through planning events, ministry opportunities, and countless meetings, our friendship began to grow into something deeper.
+                </p> <br>
+                <p data-en="One evening after a Saturday Spanish service, Tavi gave me a ride home, treated me to Wendy’s, and shared his interest in me. With the guidance of spiritual leadership, we chose to take things slow. We didn’t know how it would all work out but we trusted that God was creative and would make a way. It wasn’t until the next semester that we had our very first official date: dinner at Bazbeaux Pizza in downtown Indianapolis, followed by a walk to Moar Tea for boba."
+                data-es="Una noche, después de un servicio de español en sábado, Tavi me llevó a casa, me invitó a Wendy’s y me confesó su interés por mí. Con la guía de nuestro liderazgo espiritual, decidimos tomar las cosas con calma. No sabíamos cómo resultaría todo, pero confiamos en que Dios es creativo y abriría un camino. No fue sino hasta el siguiente semestre que tuvimos nuestra primera cita oficial: cenamos en Bazbeaux Pizza en el centro de Indianápolis, seguido de una caminata a Moar Tea por un boba.">
+                One evening after a Saturday Spanish service, Tavi gave me a ride home, treated me to Wendy’s, and shared his interest in me. With the guidance of spiritual leadership, we chose to take things slow. We didn’t know how it would all work out but we trusted that God was creative and would make a way. It wasn’t until the next semester that we had our very first official date: dinner at Bazbeaux Pizza in downtown Indianapolis, followed by a walk to Moar Tea for boba.
+                </p> <br>
+                <p data-en="As the months passed, so did our love. We saw one another in every part of Bible college life—our study habits, spiritual disciplines, friendships, and devotion to God."
+                data-es="">As the months passed, so did our love. We saw one another in every part of Bible college life—our study habits, spiritual disciplines, friendships, and devotion to God.</p> <br>
+                <p data-en="As my time at IBC came to an end, fear almost took hold of our hearts. But through prayer, we chose to continue loving one another through the distance. On May 10th, we said goodbye at the airport after crying for the entire car ride. It was a bittersweet moment. We were stepping into an uncertain future while trusting that God was still writing our story. We endured a summer apart while Tavi was in Alaska, the growing time difference when he returned to Indianapolis, and all the in-betweens."
+                data-es="Cuando mi tiempo en IBC llegó a su fin, el miedo casi se apoderó de nuestros corazones. Pero a través de la oración, elegimos seguir amándonos a pesar de la distancia. El 10 de mayo nos despedimos en el aeropuerto después de llorar durante todo el camino en el auto. Fue un momento agridulce; estábamos entrando en un futuro incierto, confiando en que Dios aún seguía escribiendo nuestra historia. Soportamos un verano separados mientras Tavi estaba en Alaska, la creciente diferencia de horario cuando regresó a Indianápolis y todos los momentos intermedios.">
+                As my time at IBC came to an end, fear almost took hold of our hearts. But through prayer, we chose to continue loving one another through the distance. On May 10th, we said goodbye at the airport after crying for the entire car ride. It was a bittersweet moment. We were stepping into an uncertain future while trusting that God was still writing our story. We endured a summer apart while Tavi was in Alaska, the growing time difference when he returned to Indianapolis, and all the in-betweens.</p>
+                <br>
+                <p data-en="In September, Octavio visited California to meet the family. Though it was a short trip, it confirmed once again what we already knew—that we were meant to be. He returned later that year, surprising me on Christmas Eve. We spent the holidays together, and on January 8th, surrounded by his family, Octavio proposed in Malibu. With the ocean and cliffs as our backdrop, I said yes—to the man of my dreams."
+                data-es="En septiembre, Octavio visitó California para conocer a la familia. Aunque fue un viaje corto, confirmó una vez más lo que ya sabíamos: que estábamos destinados a estar juntos. Él regresó más tarde ese mismo año, sorprendiéndome en Nochebuena. Pasamos las fiestas juntos y, el 8 de enero, rodeado de su familia, Octavio me propuso matrimonio en Malibú. Con el océano y los acantilados como telón de fondo, dije que sí al hombre de mis sueños.">
+                In September, Octavio visited California to meet the family. Though it was a short trip, it confirmed once again what we already knew—that we were meant to be. He returned later that year, surprising me on Christmas Eve. We spent the holidays together, and on January 8th, surrounded by his family, Octavio proposed in Malibu. With the ocean and cliffs as our backdrop, I said yes—to the man of my dreams.</p>
+                <br>
+                <p data-en="And now we are here: still trusting, still believing, and still confident that God is the Author of our story and the Finisher of our faith. "
+                data-es="Y ahora estamos aquí: siguiendo en confianza, siguiendo en fe y con la plena seguridad de que Dios es el Autor de nuestra historia y el Consumador de nuestra fe.">
+                And now we are here: still trusting, still believing, and still confident that God is the Author of our story and the Finisher of our faith. </p>
+            </div>
+        </div>
+    </section>
 
     <section id="dress-code" class="dress-section" alt="">
-        <img src="1-cutout.png" class="corner-flower tl" alt="">
-        <img src="3-cutout.png" class="corner-flower bl" alt="">
-        <img src="4-cutout.png" class="corner-flower br" alt="">
+        <p class="dress-title" data-en="dress code" data-es="codigo de vestimenta">dress code</p>
+        <div class="dress-card" onclick="this.classList.toggle('flipped')">
+            <div class="dress-card-inner">
+                <div class="dress-card-front">
+                    <img src="dress-code-photo-1.JPG">
+                    <svg class="curve-arrow" width="120" height="100" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+                        <path d="M10 20 Q 60 10 110 70" stroke="black" stroke-width="2" stroke-linecap="round" fill="none" />
+                        <path d="M95 65 L 110 70 L 105 55" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                      </svg>
+                    <p class="click-hint" style="width: 100px;" data-en="Click for more details" data-es="Clic para mas detalles">Click for more details</p>            
+                </div>
+                <div class="dress-card-back">
+                    <p class="dress-info">
+                        <span style="font-family: 'alice';" data-en="Ladies:" data-es="Damas:">Ladies:</span><br><br>
 
-        <p class="dress-title" data-en="Dress Code" data-es="Codigo de Vestimenta">Dress Code</p>
-        <p class="dress-info">
-            <span style="font-family: 'alice';" data-en="Think Formal Garden Party" data-es="Formal tipo “Garden Party”">Think Formal Garden Party</span>
-            <br><br>
-            <span style="font-family: 'alice';" data-en="For the Ladies:" data-es="Damas:">For the Ladies:</span><br><br>
-        
-            <span style="font-family: 'alice';" data-en="Midi or maxi dresses are encouraged." data-es="Se recomiendan vestidos midi o largos.">Midi or maxi dresses are encouraged.</span><br>
-            
-            <span style="font-family: 'alice';" data-en="Feel free to wear colors, florals, patterns, and fun textures." data-es="Pueden usar colores, flores, estampados y diferentes texturas.">Feel free to wear colors, florals, patterns, and fun textures.</span><br>
-            
-            <span style="font-family: 'alice';" data-en="Please refrain from wearing white or black" data-es="Por favor, eviten el blanco y el negro.">Please refrain from wearing white or black</span><br><br>
-            
-            <span style="font-family: 'alice';" data-en="For the Men:" data-es="Caballeros:">For the Men:</span><br><br>
-            
-            <span style="font-family: 'alice';" data-en="Suits and ties are encouraged." data-es="Se recomienda traje con corbata.">Suits and ties are encouraged.</span><br>
-            
-            <span style="font-family: 'alice';" data-en="Colors and patterns are welcome." data-es="Los colores y estampados son bienvenidos.">Colors and patterns are welcome.</span><br><br>
-    
-            <span style="font-family: 'alice';" data-en="There is no specific color code! Color is welcome and encouraged whether soft or vibrant." 
-                  data-es="No hay un color específico—¡al contrario! Se vale usar color, ya sea en tonos suaves o más llamativos.">
-                  There is no specific color code! Color is welcome and encouraged whether soft or vibrant.
-            </span><br><br>
-            <span style="font-family: 'alice';" data-en="This dress code is just a guide; it is not mandatory." 
-            data-es="Este codigo de vestimenta es solo una guía; no es obligatorio.">
-            This dress code is just a guide; it is not mandatory.
-            </span><br>
-            
-            <span style="font-family: 'alice';" data-en="The most important thing is that you feel comfortable and look gorgeous. Don't stress, just look your best!" 
-                    data-es="Lo más importante es que se sientan cómodos y vengan guapísimos. No te estreses, solo luce lo mejor posible!">
-                    The most important thing is that you feel comfortable and look gorgeous. Don't stress, just look your best!
-            </span>
-            <br><br>
-            <span style="font-family: 'alice';" data-en="Don't stress, just look your best!" 
-                    data-es="No te estreses, solo luce lo mejor posible!">
-                    Don't stress, just look your best!
-            </span>
-            </p>
+                        <span style="font-family: 'alice';" data-en=" Please reserve white bride." data-es=" Por favor, reservemos el blanco para la novia."> Please reserve white for the bride.</span><br><br>
 
-            <p style="font-family: 'anastasia'; font-size: 2rem; margin-top: 15px;" 
-            data-en="We are so happy to have you join us!" 
-            data-es="Estamos muy felices de que nos acompañen!">
-            We are so happy to have you join us!
-            </p>
-        </section>
-
-        <section id="faq" class="faq-section">
-            <p class="faq-title" data-en="Common Questions" data-es="Preguntas Frecuentes">Common Questions</p>
-            <div class="faq-container">
-                <details>
-                    <summary data-en="When is the RSVP deadline?" data-es="¿Cuál es la fecha límite para confirmar asistencia (RSVP)?">When is the RSVP deadline?</summary>
-                    <div class="faq-answer" data-en="Please RSVP by July 12th." data-es="Por favor confirmen su asistencia antes del 12 de julio.">
-                        Please RSVP by July 12th.
-                    </div>
-                </details>
+                        <span style="font-family: 'alice';" data-en="Midi or maxi dresses are encouraged." data-es="Se recomiendan vestidos midi o largos.">Midi or maxi dresses are encouraged.</span>
+                        
+                        <span style="font-family: 'alice';" data-en=" Feel free to wear colors, florals, patterns, and fun textures." data-es=" Pueden usar colores, flores, estampados y diferentes texturas."> Feel free to wear colors, florals, patterns, and fun textures.</span><br><br>
+                         
+                        <span style="font-family: 'alice';" data-en="Gentlemen:" data-es="Caballeros:">Gentlemen:</span><br><br>
+                        
+                        <span style="font-family: 'alice';" data-en="Suits and ties are encouraged." data-es="Se recomienda traje con corbata.">Suits and ties are encouraged.</span><br>
+                        
+                        <span style="font-family: 'alice';" data-en="Colors and patterns are welcome." data-es="Los colores y estampados son bienvenidos.">Colors and patterns are welcome.</span><br><br>
                 
-                <details>
-                    <summary data-en="What time should I arrive for the ceremony?" data-es="¿A qué hora debo llegar a la ceremonia?">What time should I arrive for the ceremony?</summary>
-                    <div class="faq-answer" data-en="Please arrive promptly 30 minutes before the ceremony." data-es="Les pedimos llegar puntualmente 30 minutos antes de que inicie la ceremonia.">
-                        Please arrive promptly 30 minutes before the ceremony.
-                    </div>
-                </details>
-                
-                <details>
-                    <summary data-en="Can I bring a plus one?" data-es="¿Puedo llevar acompañante?">Can I bring a plus one?</summary>
-                    <div class="faq-answer" data-en="We are excited to share this day with you, but we cannot accomodate additional guest not listed on the invitation." data-es="Nos emociona mucho compartir este día con ustedes, pero no podremos acomodar invitados adicionales que no estén incluidos en la invitación.">
-                        We are excited to share this day with you, but we cannot accomodate additional guest not listed on the invitation.
-                    </div>
-                </details>
-                
-                <details>
-                    <summary data-en="Are children welcome?" data-es="¿Se permiten niños?">Are children welcome?</summary>
-                    <div class="faq-answer" data-en="The wedding ceremony and reception will be an adult-only event with the expception of thosein the wedding party and family." data-es="Aunque nos encanta celebrar con toda la familia, este será un evento solo para adultos, con excepción de algunos familiares.">
-                        The wedding ceremony and reception will be an adult-only event with the expception of thosein the wedding party and family.
-                    </div>
-                </details>
-                
-                <details>
-                    <summary data-en="Is the wedding indoors or outdoors?" data-es="¿La boda será en interior o exterior?">Is the wedding indoors or outdoors?</summary>
-                    <div class="faq-answer" data-en="The wedding ceremony and reception will be outdoors." data-es="Nuestra boda se llevará a cabo al aire libre.">
-                        The wedding ceremony and reception will be outdoors.
-                    </div>
-                </details>
+                        <span style="font-family: 'alice';" data-en="There is no specific color code! Color is welcome and encouraged whether soft or vibrant." 
+                              data-es="No hay un color específico—¡al contrario! Se vale usar color, ya sea en tonos suaves o más llamativos.">
+                              There is no specific color code! Color is welcome and encouraged whether soft or vibrant.
+                        </span><br><br>
+                        <span style="font-family: 'alice';" data-en="This dress code is just a guide; it is not mandatory." 
+                        data-es="Este codigo de vestimenta es solo una guía; no es obligatorio.">
+                        This dress code is just a guide; it is not mandatory.
+                        </span>
+                        <br><br>
+                        <span style="font-family: 'alice';" data-en="Don't stress, just look your best!" 
+                                data-es="No te estreses, solo luce lo mejor posible!">
+                                Don't stress, just look your best!
+                        </span>
+                    </p>
+                </div>
             </div>
+        </div>
+        <p class="dress-sub-title"
+        data-en="garden party formal"
+        data-es="formal tipo 'garden party'!">garden party formal!</p>
         </section>
 
     <div id="rsvp" class="rsvp-section">
-        <img src="1-1-cutout.png" class="flower l" alt="">
-        <img src="2-1-cutout.png" class="flower r" alt="">
-        <p style="font-family: 'anastasia'; font-size: 4rem; margin-top: 15px;" data-en="Let's celebrate!" data-es="Vamos a celebrar!">Let's celebrate!</p>
-        <img class="rsvp-img" src="Tezza-4794.JPG">
-        <p style="font-family: 'alice'; text-align: center; font-size: 1.2rem; width: 60vw; margin-bottom: 15px; margin-top: 15px;" data-en="Please let us know before July 12th if you can make it."
-           data-es="Por favor, avísennos antes del 12 de julio si podrán asistir.">Please let us know before July 12th if you can make it.</p>
-        <a href="rsvp.html" class="rsvp-button">RSVP</a>
+        <div class="rsvp-text">
+            <p style="font-family: 'alice'; font-size: 3rem;"
+            data-en="kindly"
+            data-es="">kindly</p>
+            <p style="font-family: 'anastasia'; font-size: 10rem; display: inline-block; transform: rotate(-15deg); margin-left: -55px;"
+            data-en="Rsvp"
+            data-es="Rsvp">Rsvp</p>
+            <p style="font-family: 'alice'; font-size: 1.5rem; margin-bottom: 10px;"
+            data-en="by July 12th"
+            data-es="antes del 12 de Julio">by July 12th</p>
+        </div>
+        <a href="rsvp.html" class="rsvp-button"
+        data-en="RSVP HERE"
+        data-es="ENVIAR CONFIRMACION AQUI">RSVP HERE</a>
     </div>
+
+    <section id="registry" class="registry-section">
+        <div class="img-container">
+            <img src="registry-img-1.JPG">
+            <img src="registry-img-2.JPG">
+            <img src="registry-img-3.jpg">
+        </div>
+        <div class="text-container">
+            <p class="title"
+            data-en="your presence is the greatest gift!"
+            data-es="Tu presencia es el mejor regalo!"
+            >your presence is the greatest gift!</p>
+            <p class="subtext"
+            data-en="If you wish to honor us with a gift, we kindly request monetary contributions or items from our registry. Please note that all registry gifts should be delivered to Michigan."
+            data-es="Si desean honrarnos con un regalo, les pedimos amablemente contribuciones monetarias o artículos de nuestra mesa de regalos. Por favor, tomen en cuenta que todos los regalos de la mesa de regalos deben ser enviados a Michigan.">
+            If you wish to honor us with a gift, we kindly request monetary contributions or items from our registry. Please note that all registry gifts should be delivered to Michigan.</p>
+            <a href="" class="registry-button"
+            data-en="our registry"
+            data-es="nuestro registro">our registry</a>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <p class="faq-title" data-en="FAQs" data-es="FAQs">FAQs</p>
+        <div class="faq-container">
+            <details>
+                <summary class="faq-question" data-en="When is the RSVP deadline?" data-es="¿Cuál es la fecha límite para confirmar asistencia (RSVP)?">When is the RSVP deadline?</summary>
+                <p class="faq-answer" data-en="Please RSVP by July 12th." data-es="Por favor confirmen su asistencia antes del 12 de julio.">
+                    Please RSVP by July 12th.
+                </p>
+            </details>
+            
+            <details>
+                <summary class="faq-question" data-en="What time should I arrive for the ceremony?" data-es="¿A qué hora debo llegar a la ceremonia?">What time should I arrive for the ceremony?</summary>
+                <p class="faq-answer" data-en="Please arrive promptly 30 minutes before the ceremony." data-es="Les pedimos llegar puntualmente 30 minutos antes de que inicie la ceremonia.">
+                    Please arrive promptly 30 minutes before the ceremony.
+                </p>
+            </details>
+            
+            <details>
+                <summary class="faq-question" data-en="Can I bring a plus one?" data-es="¿Puedo llevar acompañante?">Can I bring a plus one?</summary>
+                <p class="faq-answer" data-en="We are excited to share this day with you, but we cannot accomodate additional guest not listed on the invitation." data-es="Nos emociona mucho compartir este día con ustedes, pero no podremos acomodar invitados adicionales que no estén incluidos en la invitación.">
+                    We are excited to share this day with you, but we cannot accomodate additional guest not listed on the invitation.
+                </p>
+            </details>
+            
+            <details>
+                <summary class="faq-question" data-en="Are children welcome?" data-es="¿Se permiten niños?">Are children welcome?</summary>
+                <p class="faq-answer" data-en="The wedding ceremony and reception will be an adult-only event with the expception of thosein the wedding party and family." data-es="Aunque nos encanta celebrar con toda la familia, este será un evento solo para adultos, con excepción de algunos familiares.">
+                    The wedding ceremony and reception will be an adult-only event with the expception of thosein the wedding party and family.
+                </p>
+            </details>
+            
+            <details>
+                <summary class="faq-question" data-en="Is the wedding indoors or outdoors?" data-es="¿La boda será en interior o exterior?">Is the wedding indoors or outdoors?</summary>
+                <p class="faq-answer" data-en="The wedding ceremony and reception will be outdoors." data-es="Nuestra boda se llevará a cabo al aire libre.">
+                    The wedding ceremony and reception will be outdoors.
+                </p>
+            </details>
+        </div>
+    </section>
     
     <section id="countdown" class="countdown-timer">
         <p id="demo" class="days-left"></p>

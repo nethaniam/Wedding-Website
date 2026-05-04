@@ -3,8 +3,8 @@
     {
       "id": "rios-main",
       "guest": "",
-      "display": "Rios Family!",
-      "display_es": "Familia Rios!",
+      "display": "Rios Family ",
+      "display_es": "Familia Rios ",
       "allowed": 5
     }
   ],
@@ -12,8 +12,8 @@
     {
       "id": "mora-main",
       "guest": "",
-      "display": "Mora Family!",
-      "display_es": "Familia Mora!",
+      "display": "Mora Family ",
+      "display_es": "Familia Mora ",
       "allowed": 2
     }
   ],
@@ -21,8 +21,8 @@
     {
       "id": "Bradbury-main",
       "guest": "",
-      "display": "Bradbury Family!",
-      "display_es": "Familia Bradbury!",
+      "display": "Bradbury Family ",
+      "display_es": "Familia Bradbury ",
       "allowed": 2
     }
   ],
@@ -30,15 +30,15 @@
     {
       "id": "sanchez-main",
       "guest": "Salvador Sanchez & Family",
-      "display": "Sanchez Family!",
-      "display_es": "Familia Sanchez!",
+      "display": "Sanchez Family ",
+      "display_es": "Familia Sanchez ",
       "allowed": 4
     },
     {
       "id": "Sanchez-Briana",
       "guest": "Briana Sanchez & Family",
-      "display": "Sanchez Family!",
-      "display_es": "Familia Sanchez!",
+      "display": "Sanchez Family ",
+      "display_es": "Familia Sanchez ",
       "allowed": 5
     }
   ],
@@ -64,22 +64,22 @@
     {
       "id": "Carrillo-Maria",
       "guest": "Maria Carrillo & Family",
-      "display": "Maria Carrillo & Family!",
-      "display_es": "Maria Carrillo y Familia!",
+      "display": "Maria Carrillo & Family ",
+      "display_es": "Maria Carrillo y Familia ",
       "allowed": 4
     },
     {
       "id": "Carrillo-Francisco",
       "guest": "Francisco Carillo",
-      "display": "Francisco Carrillo!",
-      "display_es": "Francisco Carrillo!",
+      "display": "Francisco Carrillo ",
+      "display_es": "Francisco Carrillo ",
       "allowed": 1
     },
     {
       "id": "Carrillo-Mayra",
       "guest": "Mayra & Francisco Jr. Carillo",
-      "display": "Mayra & Francisco Jr. Carrillo!",
-      "display_es": "Mayra y Francisco Jr. Carrillo!",
+      "display": "Mayra & Francisco Jr. Carrillo ",
+      "display_es": "Mayra y Francisco Jr. Carrillo ",
       "allowed": 2
     }
   ],
@@ -87,8 +87,8 @@
     {
       "id": "Cisneros-main",
       "guest": "",
-      "display": "Cisneros Family!",
-      "display_es": "Familia Cisneros!",
+      "display": "Cisneros Family ",
+      "display_es": "Familia Cisneros ",
       "allowed": 3
     }
   ],
@@ -96,8 +96,8 @@
     {
       "id": "navarro-main",
       "guest": "",
-      "display": "Navarro Family!",
-      "display_es": "Familia Navarro!",
+      "display": "Navarro Family ",
+      "display_es": "Familia Navarro ",
       "allowed": 4
     }
   ],
@@ -105,8 +105,8 @@
     {
       "id": "giron-main",
       "guest": "",
-      "display": "Giron Family!",
-      "display_es": "Familia Giron!",
+      "display": "Giron Family ",
+      "display_es": "Familia Giron ",
       "allowed": 4
     }
   ],
@@ -114,8 +114,8 @@
     {
       "id": "Arreola-main",
       "guest": "",
-      "display": "Arreola Family!",
-      "display_es": "Familia Arreola!",
+      "display": "Arreola Family ",
+      "display_es": "Familia Arreola ",
       "allowed": 3
     }
   ],
@@ -123,8 +123,8 @@
     {
       "id": "aleman-main",
       "guest": "",
-      "display": "Aleman Family!",
-      "display_es": "Familia Aleman!",
+      "display": "Aleman Family ",
+      "display_es": "Familia Aleman ",
       "allowed": 4
     }
   ],
@@ -132,8 +132,8 @@
     {
       "id": "bonilla-main",
       "guest": "",
-      "display": "Bonilla Family!",
-      "display_es": "Familia Bonilla!",
+      "display": "Bonilla Family ",
+      "display_es": "Familia Bonilla ",
       "allowed": 3
     }
   ],
@@ -141,8 +141,8 @@
     {
       "id": "Cedeño-main",
       "guest": "",
-      "display": "Cedeño Family!",
-      "display_es": "Familia Cedeño!",
+      "display": "Cedeño Family ",
+      "display_es": "Familia Cedeño ",
       "allowed": 7
     }
   ],
@@ -150,15 +150,15 @@
     {
       "id": "Lopez-Pedro",
       "guest": "Pedro Lopez & Family",
-      "display": "Pedro Lopez & Family!",
-      "display_es": "Pedro Lopez y Familia!",
+      "display": "Pedro Lopez & Family ",
+      "display_es": "Pedro Lopez y Familia ",
       "allowed": 4
     },
     {
       "id": "Lopez-Rafael",
       "guest": "Rafael Lopez & Family",
-      "display": "Rafael Lopez & Family!",
-      "display_es": "Rafael Lopez y Familia!",
+      "display": "Rafael Lopez & Family ",
+      "display_es": "Rafael Lopez y Familia ",
       "allowed": 3
     }
   ],
@@ -166,8 +166,8 @@
     {
       "id": "Zaragoza-main",
       "guest": "",
-      "display": "Noe & Kayla Zaragoza!",
-      "display_es": "Noe y Kayla Zaragoza!",
+      "display": "Noe & Kayla Zaragoza ",
+      "display_es": "Noe y Kayla Zaragoza ",
       "allowed": 2
     }
   ],
@@ -175,22 +175,22 @@
     {
       "id": "Flores-Ricardo",
       "guest": "Ricardo Flores & Family",
-      "display": "Ricardo Flores & Family!",
-      "display_es": "Ricardo Flores y Familia!",
+      "display": "Ricardo Flores & Family ",
+      "display_es": "Ricardo Flores y Familia ",
       "allowed": 3
     },
     {
       "id": "Flores-Joe",
       "guest": "Joe Flores & Family",
-      "display": "Joe Flores & Family!",
-      "display_es": "Joe Flores y Familia!",
+      "display": "Joe Flores & Family ",
+      "display_es": "Joe Flores y Familia ",
       "allowed": 4
     },
     {
       "id": "Esmeralda Flores",
       "guest": "Esmeralda Flores",
-      "display": "Esmeralda Flores!",
-      "display_es": "Esmeralda Flores!",
+      "display": "Esmeralda Flores ",
+      "display_es": "Esmeralda Flores ",
       "allowed": 1
     }
   ],
@@ -198,8 +198,8 @@
     {
       "id": "Prado-main",
       "guest": "",
-      "display": "Prado Family!",
-      "display_es": "Familia Prado!",
+      "display": "Prado Family ",
+      "display_es": "Familia Prado ",
       "allowed": 3
     }
   ],
@@ -207,8 +207,8 @@
     {
       "id": "castillo-main",
       "guest": "",
-      "display": "Lourdes & Mateo Castillo!",
-      "display_es": "Lourdes y Mateo Castillo!",
+      "display": "Lourdes & Mateo Castillo ",
+      "display_es": "Lourdes y Mateo Castillo ",
       "allowed": 2
     }
   ],
@@ -216,8 +216,8 @@
     {
       "id": "ramos-main",
       "guest": "",
-      "display": "Lupe Ramos!",
-      "display_es": "Lupe Ramos!",
+      "display": "Lupe Ramos ",
+      "display_es": "Lupe Ramos ",
       "allowed": 1
     }
   ],
@@ -225,8 +225,8 @@
     {
       "id": "cruz-bernard-main",
       "guest": "",
-      "display": "Mairym Cruz-Bernard & Family!",
-      "display_es": "Mairym Cruz-Bernard y Familia!",
+      "display": "Mairym Cruz-Bernard & Family ",
+      "display_es": "Mairym Cruz-Bernard y Familia ",
       "allowed": 2
     }
   ],
@@ -234,8 +234,8 @@
     {
       "id": "torres-main",
       "guest": "",
-      "display": "Giselle Torres!",
-      "display_es": "Giselle Torres!",
+      "display": "Giselle Torres ",
+      "display_es": "Giselle Torres ",
       "allowed": 1
     }
   ],
@@ -243,8 +243,8 @@
     {
       "id": "gutierrez-main",
       "guest": "",
-      "display": "Gutierrez Family!",
-      "display_es": "Familia Gutierrez!",
+      "display": "Gutierrez Family ",
+      "display_es": "Familia Gutierrez ",
       "allowed": 5
     }
   ],
@@ -252,8 +252,8 @@
     {
       "id": "Medina-main",
       "guest": "",
-      "display": "Medina Family!",
-      "display_es": "Familia Medina!",
+      "display": "Medina Family ",
+      "display_es": "Familia Medina ",
       "allowed": 2
     }
   ],
@@ -261,8 +261,8 @@
     {
       "id": "Orellana-main",
       "guest": "",
-      "display": "Orellana Family!",
-      "display_es": "Familia Orellana!",
+      "display": "Orellana Family ",
+      "display_es": "Familia Orellana ",
       "allowed": 3
     }
   ],
@@ -270,8 +270,8 @@
     {
       "id": "escobar-main",
       "guest": "",
-      "display": "Marcela Escobar!",
-      "display_es": "Marcela Escobar!",
+      "display": "Marcela Escobar ",
+      "display_es": "Marcela Escobar ",
       "allowed": 1
     }
   ],
@@ -279,8 +279,8 @@
     {
       "id": "Mejia-main",
       "guest": "",
-      "display": "Elizabeth & Emerson Mejia!",
-      "display_es": "Elizabeth y Emerson Mejia!",
+      "display": "Elizabeth & Emerson Mejia ",
+      "display_es": "Elizabeth y Emerson Mejia ",
       "allowed": 2
     }
   ],
@@ -288,8 +288,8 @@
     {
       "id": "magdalene-main",
       "guest": "",
-      "display": "Damien Magdaleno!",
-      "display_es": "Damien Magdaleno!",
+      "display": "Damien Magdaleno ",
+      "display_es": "Damien Magdaleno ",
       "allowed": 1
     }
   ],
@@ -297,8 +297,8 @@
     {
       "id": "Haruzi-main",
       "guest": "",
-      "display": "Seth Haruzi!",
-      "display_es": "Seth Haruzi!",
+      "display": "Seth Haruzi ",
+      "display_es": "Seth Haruzi ",
       "allowed": 1
     }
   ],
@@ -306,8 +306,8 @@
     {
       "id": "dueñas-main",
       "guest": "",
-      "display": "Edwin Dueñas!",
-      "display_es": "Edwin Dueñas!",
+      "display": "Edwin Dueñas ",
+      "display_es": "Edwin Dueñas ",
       "allowed": 1
     }
   ],
@@ -315,8 +315,8 @@
     {
       "id": "Johnston-main",
       "guest": "",
-      "display": "Pastor Danny & Charlene Johnston!",
-      "display_es": "Pastor Danny y Charlene Johnston!",
+      "display": "Pastor Danny & Charlene Johnston ",
+      "display_es": "Pastor Danny y Charlene Johnston ",
       "allowed": 2
     }
   ],
@@ -324,15 +324,15 @@
     {
       "id": "Gonzalez-main",
       "guest": "",
-      "display": "Juan & Christina Gonzalez!",
-      "display_es": "Juan y Christina Gonzalez!",
+      "display": "Juan & Christina Gonzalez ",
+      "display_es": "Juan y Christina Gonzalez ",
       "allowed": 2
     },
     {
       "id": "Gonzalez-terry",
       "guest": "",
-      "display": "Terry Gonzalez!",
-      "display_es": "Terry Gonzalez!",
+      "display": "Terry Gonzalez ",
+      "display_es": "Terry Gonzalez ",
       "allowed": 1
     }
   ],
@@ -340,15 +340,15 @@
     {
       "id": "Garcia-main",
       "guest": "",
-      "display": "Pastor Garcia & Family!",
-      "display_es": "Pastor Garcia y Familia!",
+      "display": "Pastor Garcia & Family ",
+      "display_es": "Pastor Garcia y Familia ",
       "allowed": 5
     },
     {
       "id": "Garcia-gulpiano",
       "guest": "",
-      "display": "Gulpiano & Oli Garcia!",
-      "display_es": "Gulpiano y Oli Garcia!",
+      "display": "Gulpiano & Oli Garcia ",
+      "display_es": "Gulpiano y Oli Garcia ",
       "allowed": 2
     }
   ],
@@ -356,8 +356,8 @@
     {
       "id": "Ibañez-Sabrina",
       "guest": "",
-      "display": "Sabrina!",
-      "display_es": "Sabrina!",
+      "display": "Sabrina ",
+      "display_es": "Sabrina ",
       "allowed": 1
     }
   ],
@@ -365,29 +365,29 @@
     {
       "id": "Ayala-main",
       "guest": "",
-      "display": "Ayala Family!",
-      "display_es": "Familia Ayala!",
+      "display": "Ayala Family ",
+      "display_es": "Familia Ayala ",
       "allowed": 4
     },
     {
       "id": "Erika-Ayala",
       "guest": "",
-      "display": "Erika Ayala & Wendy Montalvo!",
-      "display_es": "Erika Ayala y Wendy Montalvo!",
+      "display": "Erika Ayala & Wendy Montalvo ",
+      "display_es": "Erika Ayala y Wendy Montalvo ",
       "allowed": 2
     },
     {
       "id": "ayala-marcos",
       "guest": "",
-      "display": "Marcos Ayala & Family!",
-      "display_es": "Marcos Ayala y Familia!",
+      "display": "Marcos Ayala & Family ",
+      "display_es": "Marcos Ayala y Familia ",
       "allowed": 5
     },
     {
       "id": "ayala-karina",
       "guest": "",
-      "display": "Karina Ayala & Family!",
-      "display_es": "Karina Ayala y Familia!",
+      "display": "Karina Ayala & Family ",
+      "display_es": "Karina Ayala y Familia ",
       "allowed": 3
     }
   ],
@@ -395,8 +395,8 @@
     {
       "id": "Boyd-nathaniel",
       "guest": "",
-      "display": "Nathaniel Boyd!",
-      "display_es": "Nathaniel Boyd!",
+      "display": "Nathaniel Boyd ",
+      "display_es": "Nathaniel Boyd ",
       "allowed": 1
     }
   ],
@@ -404,8 +404,8 @@
     {
       "id": "hastman-alexander",
       "guest": "",
-      "display": "Alexander Hastman!",
-      "display_es": "Alexander Hastman!",
+      "display": "Alexander Hastman ",
+      "display_es": "Alexander Hastman ",
       "allowed": 1
     }
   ],
@@ -413,8 +413,8 @@
     {
       "id": "Vitanza-sergio",
       "guest": "",
-      "display": "Sergio Vitanza!",
-      "display_es": "Sergio Vitanza!",
+      "display": "Sergio Vitanza ",
+      "display_es": "Sergio Vitanza ",
       "allowed": 1
     }
   ],
@@ -422,8 +422,8 @@
     {
       "id": "Atwood-will",
       "guest": "",
-      "display": "Will Atwood!",
-      "display_es": "Will Atwood!",
+      "display": "Will Atwood ",
+      "display_es": "Will Atwood ",
       "allowed": 1
     }
   ],
@@ -431,8 +431,8 @@
     {
       "id": "gaytan-main",
       "guest": "",
-      "display": "Alex & Kiara Gaytan!",
-      "display_es": "Alex y Kiara Gaytan!",
+      "display": "Alex & Kiara Gaytan ",
+      "display_es": "Alex y Kiara Gaytan ",
       "allowed": 2
     }
   ],
@@ -440,8 +440,8 @@
     {
       "id": "matzo-main",
       "guest": "",
-      "display": "Matzoll Family!",
-      "display_es": "Familia Matzoll!",
+      "display": "Matzoll Family ",
+      "display_es": "Familia Matzoll ",
       "allowed": 3
     }
   ],
@@ -449,8 +449,8 @@
     {
       "id": "Anderson-main",
       "guest": "",
-      "display": "Matthew & Salma Anderson!",
-      "display_es": "Matthew y Salma Anderson!",
+      "display": "Matthew & Salma Anderson ",
+      "display_es": "Matthew y Salma Anderson ",
       "allowed": 2
     }
   ],
@@ -458,8 +458,8 @@
     {
       "id": "Sebastian-main",
       "guest": "",
-      "display": "Jamin & Isabella Sebastian!",
-      "display_es": "Jamin y Isabella Sebastian!",
+      "display": "Jamin & Isabella Sebastian ",
+      "display_es": "Jamin y Isabella Sebastian ",
       "allowed": 2
     }
   ],
@@ -467,8 +467,8 @@
     {
       "id": "ozuna-main",
       "guest": "",
-      "display": "Martha Ozuna!",
-      "display_es": "Martha Ozuna!",
+      "display": "Martha Ozuna ",
+      "display_es": "Martha Ozuna ",
       "allowed": 1
     }
   ],
@@ -476,8 +476,8 @@
     {
       "id": "Vizcarra-lupita",
       "guest": "",
-      "display": "Lupita Vizcarra!",
-      "display_es": "Lupita Vizcarra!",
+      "display": "Lupita Vizcarra ",
+      "display_es": "Lupita Vizcarra ",
       "allowed": 1
     }
   ],
@@ -485,15 +485,15 @@
     {
       "id": "hernandez-main",
       "guest": "",
-      "display": "Hernandez Family!",
-      "display_es": "Familia Hernandez!",
+      "display": "Hernandez Family ",
+      "display_es": "Familia Hernandez ",
       "allowed": 4
     },
     {
       "id": "hernandez-jahzeel",
       "guest": "",
-      "display": "Jahzeel & Denilson Hernandez!",
-      "display_es": "Jahzeel y Denilson Hernandez!",
+      "display": "Jahzeel & Denilson Hernandez ",
+      "display_es": "Jahzeel y Denilson Hernandez ",
       "allowed": 2
     }
   ]
