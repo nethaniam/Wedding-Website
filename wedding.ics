@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//https://app.netlify.com/projects/ayala-wedding-2026/overview//EN
+BEGIN:VEVENT
+UID:wedding-2026-08-29
+DTSTAMP:20260504T120000Z
+DTSTART:20260829T180000
+DTEND:20260829T230000
+SUMMARY:Our Wedding
+DESCRIPTION:We can't wait to celebrate with you!
+LOCATION:5012 Riverview Dr, Jurupa Valley, CA 92509
+END:VEVENT
+END:VCALENDAR

@@ -86,6 +86,21 @@ function setLanguage(lang) {
     localStorage.setItem('preferred_lang', lang);
 }
 
+document.getElementById('calendar-save').addEventListener('click', function() {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    
+    // Your specific wedding details
+    const googleUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Octavio+and+Cesia's+Wedding&dates=20260829T180000/20260829T230000&location=5012+Riverview+Dr,+Jurupa+Valley,+CA+92509";    const icsFile = "wedding.ics";
+
+    if (isIOS) {
+        // Triggers the download for Apple Calendar
+        window.location.href = icsFile;
+    } else {
+        // Opens Google Calendar in a new tab for everyone else
+        window.open(googleUrl, '_blank');
+    }
+});
+
 
 window.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferred_lang') || 'en';
