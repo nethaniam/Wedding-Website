@@ -8,7 +8,7 @@
 
 html, body {
     min-height: 100vh;
-    min-width: 400px;
+    min-width: 375px;
     max-width: 100%;
     position: relative;
     background-color: #FFFFF6;
@@ -134,6 +134,7 @@ html, body {
 
     .hero {
         min-height: 400px;
+        min-width: 350px;
         height: 100vh;
         width: 100%;
         display: flex;
@@ -197,6 +198,7 @@ html, body {
 
 /* WELCOME */
     .intro-section {
+        min-width: 350px;
         width: 100%;
         min-height: 900px;
         display: flex;
@@ -258,26 +260,26 @@ html, body {
 /* GALLERY */
     .photo-gallery {
         min-width: 300px;
-        min-height: 100vh;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
-        position: relative;
+        margin-bottom: 25px;
     }
 
     .gallery-column {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         gap: 15px;
         flex: 1;
+        height: 100%;
     }
 
     .photo-gallery img {
         width: 95%;
-        height: 49vh;
+        height: 45vh;
         display: block;
         object-fit: cover;
         border-radius: 25px;
@@ -285,8 +287,13 @@ html, body {
         object-position: center;
     }
 
+    .gallery-column:nth-child(2) img:first-child {
+        object-position: 90% center;
+    }
+
 /* Love Story Section */
     .love-story-section {
+        min-width: 350px;
         width: 100%;
         height: 100%;
         display: flex;
@@ -303,12 +310,13 @@ html, body {
     }
 
     .love-img {
+
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 20px;
-        width: 45%;
+        justify-content: space-between;
+        gap: 75px;
+        width: 40%;
         height: 100%;
     }
 
@@ -319,11 +327,12 @@ html, body {
     }
 
     .love-container {
-        width: 100%;
+        min-width: 350px;
+        width: 100vw;
         max-width: 950px;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         padding: 10px;
     }
@@ -335,7 +344,12 @@ html, body {
         gap: 10px;
         white-space: nowrap;
         font-family: 'alice';
-        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .our-span {
+        font-family: 'alice';
+        font-size: 2.5rem;
     }
 
     .love-span {
@@ -343,8 +357,8 @@ html, body {
         font-size: 7rem;
         display: inline-block;
         transform: rotate(-15deg);
-        margin-left: -10px;
-        margin-right: 25px;
+        margin-left: -20px;
+        margin-right: 20px;
     }
 
     .story-span {
@@ -352,16 +366,20 @@ html, body {
         font-size: 2.5rem;
     }
 
+    .spanish-active .our-span {
+        font-size: 2rem;
+    }
+
     .spanish-active .love-span {
         font-family: 'alice';
-        font-size: 2.5rem;
+        font-size: 2rem;
         transform: rotate(0deg) !important;
         margin: 0 10px;
     }
 
     .spanish-active .story-span {
         font-family: 'anastasia';
-        font-size: 7rem;
+        font-size: 5rem;
         display: inline-block;
         transform: rotate(-15deg);
         margin-left: -25px;
@@ -444,13 +462,14 @@ html, body {
 
 /* Location */
     .location-section {
-        min-height: 100vh;
+        min-height: 700px;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         padding: 2%;
+        margin-bottom: 25px;
     }
 
     .location-info {
@@ -831,6 +850,7 @@ html, body {
 /* Dress Code Section */
     .dress-card {
         width: 100%;
+        min-width: 350px;
         height: 550px;
         perspective: 1000px;
         cursor: pointer;
@@ -840,7 +860,7 @@ html, body {
 
     .dress-card-inner {
         position: relative;
-        min-width: 450px;
+        min-width: 375px;
         width: 100%;
         height: 100%;
         text-align: center;
@@ -853,7 +873,7 @@ html, body {
         transform: rotateY(180deg);
     }
 
-    .dress-card-front, .dress-card-back {
+    .dress-card-back {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -866,13 +886,26 @@ html, body {
         align-items: center;
     }
 
+    .dress-card-front {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        border-radius: 25px;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     .dress-card-front img {
         max-width: 350px;
-        min-width: 275px;
-        width: 59%;
+        min-width: 270px;
+        width: 55%;
         height: 100%;
         object-fit: cover;
         border-radius: 25px;
+        margin-left: 40px;
     }
 
     .dress-card-back {
@@ -887,23 +920,27 @@ html, body {
     }
 
     .curve-arrow {
-        width: 75px;
+        width: 55px;
         height: auto;
-        position: absolute;
         transform: scaleY(-1) rotate(90deg);
         z-index: 5;
         pointer-events: none;
-        right: 35px;
-        top: 175px;
+    }
+
+    .arrow-click {
+        min-width: 50px;
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
     }
 
     .click-hint {
-        position: absolute;
-        right: 5px;
-        bottom: 255px;
-        padding: 5px 15px;
-        font-size: 0.7rem;
+        width: 50px;
+        font-size: 0.5rem;
         font-family: 'alice';
+        margin-left: 10px;
     }
 
     .curve-arrow, .click-hint {
@@ -922,7 +959,7 @@ html, body {
     }
 
     .dress-section {
-        min-height: 100vh;
+        min-height: 700px;
         position: relative;
         overflow: hidden;
         padding-bottom: 20px;
@@ -936,30 +973,40 @@ html, body {
 
     .dress-title {
         font-family: 'anastasia';
-        font-size: 7rem;
+        font-size: 5.5rem;
         color: #c7d188;
         line-height: 0.59;
         margin-left: -50px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .dress-sub-title {
         font-family: 'anastasia';
-        font-size: 3rem;
+        font-size: 2.5rem;
         color: #c7d188;
         margin-bottom: 50px;
-        margin-left: -25px;
+        margin-left: -45px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 /* FAQ Section */
     .faq-section {
+        position: relative;
         padding: 20px;
         text-align: center;
-        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         width: 100%;
+        flex-wrap: wrap;
+        min-height: 700px;
     }
 
     .faq-title {
@@ -977,16 +1024,18 @@ html, body {
 
     .faq-question {
         font-family: 'alice';
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         text-align: left;
+        line-height: 1.3;
+        padding-right: 25px;
     }
 
     .faq-answer {
         font-family: 'alice';
-        font-size: 0.95rem;
+        font-size: 1.1rem;
         padding: 15px;
         color: black;
-        line-height: 1.6;
+        line-height: 1.3;
         animation: fadeIn 0.4s ease;
         margin-bottom: 20px;
         text-align: left;
@@ -996,7 +1045,7 @@ html, body {
         list-style: none; /* Removes default arrow in most browsers */
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         cursor: pointer;
         padding: 15px 0;
         position: relative;
@@ -1012,7 +1061,9 @@ html, body {
         font-size: 1.5rem;
         font-weight: 300;
         transition: opacity 0.3s ease;
+        font-family: 'Segoe UI', sans-serif;
         right: 10px;
+        flex-shrink: 0;
     }
 
     summary::before {
@@ -1021,7 +1072,7 @@ html, body {
     }
 
     summary::after {
-        content: '-';
+        content: '−';
         opacity: 0;
     }
 
@@ -1030,6 +1081,7 @@ html, body {
     }
 
     details[open] summary::after {
+        content: '−';
         opacity: 1;
     }
 
@@ -1044,6 +1096,7 @@ html, body {
 
 /* Registry Section */
     .registry-section {
+        position: relative;
         min-height: 750px;
         width: 100%;
         display: flex;
@@ -1055,7 +1108,7 @@ html, body {
     }
 
     .img-container {
-        min-height: 400px;
+        min-height: 350px;
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -1069,7 +1122,8 @@ html, body {
     }
 
     .text-container {
-        height: 45vh;
+        min-height: 200px;
+        margin-bottom: 5%;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -1121,16 +1175,17 @@ html, body {
 
     .location-2 {
         width: 100%;
-        min-height: 100vh;
+        min-height: 500px;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 5px;
+        margin-bottom: 50px;
     }
 
     .img-container-loc {
         width: 500px;
-        height: 700px;
+        min-height: 500px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1191,9 +1246,11 @@ html, body {
 
     .row-2-loc img {
         width: 50px;
+        margin-left: 15px;
     }
 
     .row-1-loc {
+        width: 400px;
         height: 100px;
         display: flex;
         flex-direction: row;
@@ -1205,6 +1262,7 @@ html, body {
 
     .row-2-loc {
         height: 125px;
+        width: 400px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -1222,7 +1280,7 @@ html, body {
         gap: 10px;
     }
 
-    .location-3 p {
+    .location-3 p, .location-3 span {
         font-family: 'alice';
         padding: 5px;
     }
@@ -1311,6 +1369,10 @@ html, body {
             object-position: center;
         }
 
+        .gallery-column:nth-child(2) img:first-child {
+            object-position: 90% center;
+        }
+
         .faq-section {
             padding: 20px;
             text-align: center;
@@ -1355,7 +1417,7 @@ html, body {
     }
 
 /* Laptop/Desktop Styles */
-    @media (min-width: 975px) {
+    @media (min-width: 915px) {
         .grid-container {
             flex-direction: row; /* Side-by-side cards on laptop */
             justify-content: center;
@@ -1495,12 +1557,16 @@ html, body {
 
         .photo-gallery img {
             width: 49%;
-            height: 55vh;
+            height: 75%;
             display: block;
             object-fit: cover;
             border-radius: 25px;
             transition:  transform 0.4s ease;
             object-position: center;
+        }
+
+        .gallery-column:nth-child(2) img:first-child {
+            object-position: 90% center;
         }
         
         .love-container {
@@ -1531,49 +1597,9 @@ html, body {
             border-radius: 25px;
         }
 
-        .curve-arrow {
-            width: 75px;
-            height: auto;
-            position: absolute;
-            transform: scaleY(-1) rotate(90deg);
-            z-index: 5;
-            pointer-events: none;
-            right: 50px;
-            top: 100px;
-        }
-    
-        .click-hint {
-            position: absolute;
-            right: 5px;
-            bottom: 255px;
-            padding: 5px 15px;
-            font-size: 0.7rem;
-            font-family: 'alice';
-        }
-    
-        .curve-arrow {
-            width: 75px;
-            height: auto;
-            position: absolute;
-            transform: scaleY(-1) rotate(100deg);
-            z-index: 5;
-            pointer-events: none;
-            right: 19%;
-            top: 35%;
-        }
-    
-        .click-hint {
-            position: absolute;
-            right: 15.5%;
-            bottom: 44%;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-family: 'alice';
-        }
-
         .registry-section {
-            min-height: 100vh;
+            min-height: 500px;
+            max-height: 900px;
             width: 100vw;
             display: flex;
             flex-direction: column;
@@ -1741,5 +1767,98 @@ html, body {
             font-size: 1.2rem;
         }
         
+        .dress-title {
+            font-family: 'anastasia';
+            font-size: 5.5rem;
+            color: #c7d188;
+            line-height: 0.59;
+            margin-left: -50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+        }
+    
+        .dress-sub-title {
+            font-family: 'anastasia';
+            font-size: 2.5rem;
+            color: #c7d188;
+            margin-bottom: 50px;
+            margin-left: -50px;
+            width: 100vw;
+        }
 
+        .curve-arrow {
+            width: 55px;
+            height: auto;
+            transform: scaleY(-1) rotate(90deg);
+            z-index: 5;
+            pointer-events: none;
+        }
+    
+        .arrow-click {
+            min-width: 50px;
+            width: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+    
+        .click-hint {
+            width: 50px;
+            font-size: 0.5rem;
+            font-family: 'alice';
+            margin-left: 10px;
+        }
+        .dress-card {
+            width: 100%;
+            min-width: 350px;
+            height: 550px;
+            perspective: 1000px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .dress-card-inner {
+            position: relative;
+            min-width: 375px;
+            max-width: 700px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            display: flex;
+        }
+    
+        .dress-card.flipped .dress-card-inner {
+            transform: rotateY(180deg);
+        }
+    
+        .dress-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            border-radius: 25px;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .dress-card-front {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            border-radius: 25px;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
 }
