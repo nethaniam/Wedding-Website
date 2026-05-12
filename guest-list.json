@@ -125,7 +125,7 @@
       "guest": "",
       "display": "Aleman Family ",
       "display_es": "Familia Aleman ",
-      "allowed": 4
+      "allowed": 3
     }
   ],
   "Bonilla": [
@@ -137,12 +137,12 @@
       "allowed": 3
     }
   ],
-  "Cedeno": [
+  "Cedeño": [
     {
-      "id": "Cedeno-main",
+      "id": "Cedeño-main",
       "guest": "",
-      "display": "Cedeno Family ",
-      "display_es": "Familia Cedeno ",
+      "display": "Cedeño Family ",
+      "display_es": "Familia Cedeño ",
       "allowed": 7
     }
   ],
@@ -221,25 +221,7 @@
       "allowed": 1
     }
   ],
-  "Cruz-Bernard": [
-    {
-      "id": "cruz-bernard-main",
-      "guest": "",
-      "display": "Mairym Cruz-Bernard & Family ",
-      "display_es": "Mairym Cruz-Bernard y Familia ",
-      "allowed": 2
-    }
-  ],
-  "Torres": [
-    {
-      "id": "torres-main",
-      "guest": "",
-      "display": "Giselle Torres ",
-      "display_es": "Giselle Torres ",
-      "allowed": 1
-    }
-  ],
-  "Gutierrez": [
+   "Gutierrez": [
     {
       "id": "gutierrez-main",
       "guest": "",
@@ -389,7 +371,14 @@
       "display": "Karina Ayala & Family ",
       "display_es": "Karina Ayala y Familia ",
       "allowed": 3
-    }
+    },
+  {
+        "id": "ayala-miguel",
+        "guest": "",
+        "display": "Miguel Angel & Marcela Ayala ",
+        "display_es": "Miguel Angel y Marcela Ayala ",
+        "allowed": 2
+      }
   ],
   "Boyd": [
     {
@@ -492,9 +481,34 @@
     {
       "id": "hernandez-jahzeel",
       "guest": "",
-      "display": "Jahzeel & Denilson Hernandez ",
-      "display_es": "Jahzeel y Denilson Hernandez ",
+      "display": "Jahzeel Hernandez ",
+      "display_es": "Jahzeel Hernandez ",
+      "allowed": 1
+    },
+   {
+      "id": "hernandez-denilson",
+      "guest": "",
+      "display": "Denilson Hernandez ",
+      "display_es": "Denilson Hernandez ",
+      "allowed": 1
+   }
+  ], 
+ "Rubio": [
+    {
+      "id": "Rubio-main",
+      "guest": "",
+      "display": "Jeroneno & Teofila Rubio ",
+      "display_es": "Jeroneno & Teofila Rubio ",
       "allowed": 2
     }
+  ],
+  "": [
+    {
+      "id": "",
+      "guest": "",
+      "display": "",
+      "display_es": "",
+      "allowed": 1
+    }
   ]
-}
+ } 
